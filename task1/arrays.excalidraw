@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "9T6B7P7eFlOZskYO6oWST",
+      "type": "text",
+      "x": 285,
+      "y": 41,
+      "width": 1095.75927734375,
+      "height": 1075,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a1",
+      "roundness": null,
+      "seed": 371026591,
+      "version": 975,
+      "versionNonce": 1554597215,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1730546253700,
+      "link": null,
+      "locked": false,
+      "text": "Task:\nMerge nums1 and nums2 into a single array sorted in non-decreasing order. The result should be stored in nums1.\n\nApproach:\nStart with pointers at the end of the effective parts of nums1 and nums2 (left at m-1 and right at n-1).\nUse an index idx_end at the last position of nums1 to place the merged elements.\nCompare the elements from the end of nums1 and nums2:\nPlace the larger element at idx_end and move the respective pointer (left or right) backward.\nIf elements remain in nums2 after nums1 is exhausted, copy them to nums1.\n\nLogic:\nWhile left >= 0 and right >= 0:\nIf nums1[left] < nums2[right], place nums2[right] at idx_end and move right backward.\nElse, place nums1[left] at idx_end and move left backward.\nMove idx_end backward after each placement.\nHandle remaining elements:\nIf left >= 0, copy remaining nums1 elements.\nIf right >= 0, copy remaining nums2 elements.\n\nExample:\nInput: nums1 = [1, 2, 3, 0, 0, 0], m = 3, nums2 = [2, 5, 6], n = 3 \n                     l         i                            r\n1. nums1 = [1, 2, 3, 0, 0, 0],      nums2 = [2, 5, 6]       left = 2, right = 2, idx_end = 5\n3 < 6, so nums1[5] = 6\n                     l      i                            r \n2. nums1 = [1, 2, 3, 0, 0, 6],      nums2 = [2, 5, 6]       left = 2, right = 1, idx_end = 4\n3 < 5, so nums1[4] = 5\n                     l   i                            r\n3. nums1 = [1, 2, 3, 0, 5, 6],      nums2 = [2, 5, 6]       left = 2, right = 0, idx_end = 3\n3 > 2, so nums1[3] = 3\n                  l   i                               r\n4. nums1 = [1, 2, 3, 3, 5, 6],      nums2 = [2, 5, 6]       left = 1, right = 0, idx_end = 2\n2 = 2, so nums1[2] = 2\n               l   i                                 r\n5. nums1 = [1, 2, 2, 3, 5, 6],      nums2 = [2, 5, 6]       left = 0, right = 0, idx_end = 1\n1 < 2, so nums1[1] = 2       MAIN LOOP FINISHED\n               \n6. FILL remaining baskets in nums1 with nums from nums1\nResult: nums1 = [1, 2, 2, 3, 5, 6]\n\n\n\n",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Task:\nMerge nums1 and nums2 into a single array sorted in non-decreasing order. The result should be stored in nums1.\n\nApproach:\nStart with pointers at the end of the effective parts of nums1 and nums2 (left at m-1 and right at n-1).\nUse an index idx_end at the last position of nums1 to place the merged elements.\nCompare the elements from the end of nums1 and nums2:\nPlace the larger element at idx_end and move the respective pointer (left or right) backward.\nIf elements remain in nums2 after nums1 is exhausted, copy them to nums1.\n\nLogic:\nWhile left >= 0 and right >= 0:\nIf nums1[left] < nums2[right], place nums2[right] at idx_end and move right backward.\nElse, place nums1[left] at idx_end and move left backward.\nMove idx_end backward after each placement.\nHandle remaining elements:\nIf left >= 0, copy remaining nums1 elements.\nIf right >= 0, copy remaining nums2 elements.\n\nExample:\nInput: nums1 = [1, 2, 3, 0, 0, 0], m = 3, nums2 = [2, 5, 6], n = 3 \n                     l         i                            r\n1. nums1 = [1, 2, 3, 0, 0, 0],      nums2 = [2, 5, 6]       left = 2, right = 2, idx_end = 5\n3 < 6, so nums1[5] = 6\n                     l      i                            r \n2. nums1 = [1, 2, 3, 0, 0, 6],      nums2 = [2, 5, 6]       left = 2, right = 1, idx_end = 4\n3 < 5, so nums1[4] = 5\n                     l   i                            r\n3. nums1 = [1, 2, 3, 0, 5, 6],      nums2 = [2, 5, 6]       left = 2, right = 0, idx_end = 3\n3 > 2, so nums1[3] = 3\n                  l   i                               r\n4. nums1 = [1, 2, 3, 3, 5, 6],      nums2 = [2, 5, 6]       left = 1, right = 0, idx_end = 2\n2 = 2, so nums1[2] = 2\n               l   i                                 r\n5. nums1 = [1, 2, 2, 3, 5, 6],      nums2 = [2, 5, 6]       left = 0, right = 0, idx_end = 1\n1 < 2, so nums1[1] = 2       MAIN LOOP FINISHED\n               \n6. FILL remaining baskets in nums1 with nums from nums1\nResult: nums1 = [1, 2, 2, 3, 5, 6]\n\n\n\n",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

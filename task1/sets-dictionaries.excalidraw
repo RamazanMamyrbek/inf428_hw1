@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "9T6B7P7eFlOZskYO6oWST",
+      "type": "text",
+      "x": 285,
+      "y": 41,
+      "width": 1088.2991943359375,
+      "height": 675,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a1",
+      "roundness": null,
+      "seed": 371026591,
+      "version": 1036,
+      "versionNonce": 1481222943,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1730546747621,
+      "link": null,
+      "locked": false,
+      "text": "Task:\nGiven two integer arrays nums1 and nums2, return an array of their \nintersection. Each element in the result must be unique and you may return the result in any order.\n\nApproach:\nConvert Arrays to Sets:\n - Use Python's set data structure to remove duplicate values from each array and to facilitate fast lookups.\nFind Intersection:\n - Use the intersection() method or the & operator to find common elements between the two sets.\nReturn Result:\n - Convert the result back to a list (if needed) and return.\n\nExample: \n\nInput: nums1 = [1, 2, 2, 1], nums2 = [2, 2]\n1. Conversion to Sets:\n    set1 = {1, 2}\n    set2 = {2}\n2. Intersection:\n    set1.intersection(set2) = {2}\n3. Output: [2]\n\n\n\n\n\n",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Task:\nGiven two integer arrays nums1 and nums2, return an array of their \nintersection. Each element in the result must be unique and you may return the result in any order.\n\nApproach:\nConvert Arrays to Sets:\n - Use Python's set data structure to remove duplicate values from each array and to facilitate fast lookups.\nFind Intersection:\n - Use the intersection() method or the & operator to find common elements between the two sets.\nReturn Result:\n - Convert the result back to a list (if needed) and return.\n\nExample: \n\nInput: nums1 = [1, 2, 2, 1], nums2 = [2, 2]\n1. Conversion to Sets:\n    set1 = {1, 2}\n    set2 = {2}\n2. Intersection:\n    set1.intersection(set2) = {2}\n3. Output: [2]\n\n\n\n\n\n",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}

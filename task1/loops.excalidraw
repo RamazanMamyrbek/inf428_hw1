@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://excalidraw.com",
+  "elements": [
+    {
+      "id": "9T6B7P7eFlOZskYO6oWST",
+      "type": "text",
+      "x": 282,
+      "y": 44,
+      "width": 1093.919189453125,
+      "height": 700,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a1",
+      "roundness": null,
+      "seed": 371026591,
+      "version": 342,
+      "versionNonce": 312583889,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1730544683021,
+      "link": null,
+      "locked": false,
+      "text": "Task: Find the length of the longest sequence in the array where numbers continuously increase without breaks.\n\nApproach:\n\nStart with numCount = 1 to count the current sequence length.\nUse maxLength to store the longest sequence found, starting at 1.\n\nLogic:\nGo through each number in the array:\nIf the current number is less than the next (nums[i] < nums[i+1]), increase numCount by 1.\nIf the current number is not less than the next (nums[i] >= nums[i+1]), reset numCount to 1.\nUpdate maxLength to the higher of maxLength or numCount during each step.\n\nExample: nums = [1, 3, 5, 4, 7]\n    i\n1. [1,3,5,4,7]                           nums[i] = 1, nums[i+1] = 3\n    1 < 3, so numCount += 1         numCount = 2, maxLength = 2\n       i\n2. [1,3,5,4,7]                           nums[i] = 3, nums[i+1] = 5\n    3 < 5, so numCount += 1         numCount = 3, maxLength = 3\n         i\n3. [1,3,5,4,7]                           nums[i] = 5, nums[i+1] = 4\n    5 !< 4, so numCount = 1         numCount = 1, maxLength = 3\n           i\n4. [1,3,5,4,7]                           nums[i] = 4, nums[i+1] = 7\n    4 !< 7, so numCount += 1         numCount = 2, maxLength = 3\n\nReturned maxLength = 3",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "Task: Find the length of the longest sequence in the array where numbers continuously increase without breaks.\n\nApproach:\n\nStart with numCount = 1 to count the current sequence length.\nUse maxLength to store the longest sequence found, starting at 1.\n\nLogic:\nGo through each number in the array:\nIf the current number is less than the next (nums[i] < nums[i+1]), increase numCount by 1.\nIf the current number is not less than the next (nums[i] >= nums[i+1]), reset numCount to 1.\nUpdate maxLength to the higher of maxLength or numCount during each step.\n\nExample: nums = [1, 3, 5, 4, 7]\n    i\n1. [1,3,5,4,7]                           nums[i] = 1, nums[i+1] = 3\n    1 < 3, so numCount += 1         numCount = 2, maxLength = 2\n       i\n2. [1,3,5,4,7]                           nums[i] = 3, nums[i+1] = 5\n    3 < 5, so numCount += 1         numCount = 3, maxLength = 3\n         i\n3. [1,3,5,4,7]                           nums[i] = 5, nums[i+1] = 4\n    5 !< 4, so numCount = 1         numCount = 1, maxLength = 3\n           i\n4. [1,3,5,4,7]                           nums[i] = 4, nums[i+1] = 7\n    4 !< 7, so numCount += 1         numCount = 2, maxLength = 3\n\nReturned maxLength = 3",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
