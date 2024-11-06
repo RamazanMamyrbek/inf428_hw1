@@ -13,6 +13,7 @@ def generate_department(name, importance, mean, variance, num_samples):
     }
     return department
 
+
 def calculate_threat_score(departments):
     importance_sum = 0
     total_score = 0
