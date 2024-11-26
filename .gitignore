@@ -1,3 +1,4 @@
 .idea
 /task_2/.pytest_cache
 /task_3/.pytest_cache
+venv
